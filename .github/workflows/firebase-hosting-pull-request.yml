@@ -29,8 +29,8 @@ jobs:
         working-directory: ./donjon-et-melon  # Adjust this path if needed
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
-        working-directory: ./donjon-et-melon  # Adjust this path if needed
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DONJON_ET_MELON }}
           projectId: donjon-et-melon
+          entryPoint: ./donjon-et-melon
