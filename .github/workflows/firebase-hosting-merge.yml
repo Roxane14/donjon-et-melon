@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       # Install Angular CLI globally
       - name: Install Angular CLI
         run: npm install -g @angular/cli
@@ -23,7 +23,7 @@ jobs:
 
       # Build the Angular project
       - name: Build Angular app
-        run: ng build --prod
+        run: ng build
         working-directory: ./donjon-et-melon  # Adjust this path if needed
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
