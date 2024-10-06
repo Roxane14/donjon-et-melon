@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/donjon-et-melon/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
