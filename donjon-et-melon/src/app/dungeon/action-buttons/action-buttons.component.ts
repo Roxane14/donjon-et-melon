@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -8,6 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ActionButtonsComponent {
   @Output() onAction = new EventEmitter<string>();
+  @Input() playerHealth: number = 0;
 
   performAction(action: string) {
     this.onAction.emit(action);

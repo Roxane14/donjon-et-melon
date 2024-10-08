@@ -21,6 +21,8 @@ export class DungeonComponent {
     if (action === 'Attack') {
       this.enemyHealth -= 10;
     }
-    // Add more actions (Defend, Run, Use Potion) logic as needed
+    if (action === 'Use Potion') {
+      this.playerHealth += 10;
+    }
   }
 }
