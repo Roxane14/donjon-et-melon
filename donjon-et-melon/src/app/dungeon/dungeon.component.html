@@ -1,1 +1,22 @@
-<p>dungeon works!</p>
+<div class="battle-container">
+  <div class="dungeon-background">
+    <!-- Player Creature -->
+    <app-creature
+      [name]="'Your Creature'"
+      [health]="playerHealth"
+      [xp]="playerXP">
+    </app-creature>
+
+    <!-- Enemy Creature -->
+    <app-creature
+      [name]="'Enemy Creature'"
+      [health]="enemyHealth"
+      [xp]="enemyXP">
+    </app-creature>
+  </div>
+
+  <!-- Action Buttons -->
+  <app-action-buttons
+    (onAction)="handleAction($event)">
+  </app-action-buttons>
+</div>

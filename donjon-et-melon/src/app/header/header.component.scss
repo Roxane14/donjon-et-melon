@@ -1,0 +1,32 @@
+.game-header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 2px solid #555;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tab-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-link:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
