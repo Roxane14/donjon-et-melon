@@ -1,18 +1,23 @@
-<div>
-  <div>Bataille en cours</div>
-  <div class="battle-container">
-    <div class="dungeon-background">
-      <!-- Player Creature -->
-      <app-creature [name]="'Your Creature'" [health]="playerHealth" [xp]="playerXP">
-      </app-creature>
+<div class="battle-container">
+  <div class="dungeon-background">
+    <app-creature
+      [name]="'Your Creature'"
+      [health]="playerHealth"
+      [xp]="playerXP">
+    </app-creature>
 
-      <!-- Enemy Creature -->
-      <app-creature [name]="'Enemy Creature'" [health]="enemyHealth" [xp]="enemyXP">
-      </app-creature>
-    </div>
-
-    <!-- Action Buttons -->
-    <app-action-buttons (onAction)="handleAction($event)" [playerHealth]="playerHealth">
-    </app-action-buttons>
+    <app-creature
+      [name]="'Enemy Creature'"
+      [health]="enemyHealth"
+      [xp]="enemyXP">
+    </app-creature>
   </div>
+
+  <app-action-buttons
+    (onAction)="handleAction($event)"
+    [canPlayerPlay]="canPlayerPlay">
+  </app-action-buttons>
+
+  <!-- Log Component -->
+  <app-battle-log [messages]="logMessages"></app-battle-log>
 </div>

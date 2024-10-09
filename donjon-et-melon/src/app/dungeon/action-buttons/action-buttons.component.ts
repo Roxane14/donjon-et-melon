@@ -9,6 +9,7 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 export class ActionButtonsComponent {
   @Output() onAction = new EventEmitter<string>();
   @Input() playerHealth: number = 0;
+  @Input() canPlayerPlay: boolean = true;
 
   performAction(action: string) {
     this.onAction.emit(action);

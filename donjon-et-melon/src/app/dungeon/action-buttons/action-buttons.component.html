@@ -1,5 +1,5 @@
 <div class="battle-actions">
-  <button class="action-btn" (click)="performAction('Attack')">Attack</button>
-  <button class="action-btn" (click)="performAction('Run')">Run</button>
-  <button class="action-btn" (click)="performAction('Use Potion')" [disabled]="playerHealth >= 100">Use Potion</button>
+  <button class="action-btn" (click)="performAction('Attack')" [disabled]="!canPlayerPlay">Attack</button>
+  <button class="action-btn" (click)="performAction('Run')" [disabled]="!canPlayerPlay">Run</button>
+  <button class="action-btn" (click)="performAction('Use Potion')" [disabled]="playerHealth >= 100 || !canPlayerPlay">Use Potion</button>
 </div>
