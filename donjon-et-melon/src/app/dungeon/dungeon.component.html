@@ -1,23 +1,24 @@
-<div class="battle-container">
-  <div class="dungeon-background">
-    <app-creature
-      [name]="'Your Creature'"
-      [health]="playerHealth"
-      [xp]="playerXP">
-    </app-creature>
-
-    <app-creature
-      [name]="'Enemy Creature'"
-      [health]="enemyHealth"
-      [xp]="enemyXP">
-    </app-creature>
-  </div>
-
-  <app-action-buttons
-    (onAction)="handleAction($event)"
-    [canPlayerPlay]="canPlayerPlay">
-  </app-action-buttons>
-
-  <!-- Log Component -->
+<div class="dungeon-page-container">
   <app-battle-log [messages]="logMessages"></app-battle-log>
+  <div>
+    <div class="battle-container">
+      <div class="dungeon-background">
+        <app-creature
+          [name]="'Vous'"
+          [health]="playerHealth"
+          [xp]="playerXP">
+        </app-creature>
+
+        <app-creature
+          [name]="'L\'ennemi'"
+          [health]="enemyHealth"
+          [xp]="enemyXP">
+        </app-creature>
+      </div>
+
+      <app-action-buttons
+        (onAction)="handleAction($event)">
+      </app-action-buttons>
+    </div>
+  </div>
 </div>
